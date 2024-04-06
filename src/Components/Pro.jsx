@@ -20,7 +20,7 @@ function Pro({title,price, rating, image }) {
     };
 
   return (
-    <div className=' w-full h-full bg-white flex justify-center items-center p-3  rounded-md'>
+    <div className=' w-full h-full bg-white flex justify-center items-center p-3  rounded-md hover:scale-105 transition duration-200'>
 
     <div className=' '>
         <div >
@@ -39,10 +39,10 @@ function Pro({title,price, rating, image }) {
                 
             </p>
         
-            <img src={image} alt="" className=' w-80 h-80'/>
+            <img src={image} alt="" className=' w-80 h-80 '/>
 
             <div className='flex justify-center'>
-                <button onClick={addtobasket} className=' bg-amber-300 text-black rounded-full mt-3 font-light text-sm py-1 px-4'>Add to basket</button>
+                <button onClick={addtobasket} className=' bg-amber-300 text-black rounded-full mt-3 font-light text-sm py-1 px-4 hover:scale-110 transition duration-300'>Add to basket</button>
             </div>
         </div>
         

@@ -1,6 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from 'firebase/firestore';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
 
 // Firebase configuration
 const firebaseConfig = {
@@ -12,17 +13,14 @@ const firebaseConfig = {
     messagingSenderId: "233930014585",
     appId: "1:233930014585:web:479da25b8a52b9888b79a8",
     measurementId: "G-9SF5PC7TRD"
-  };
+};
 
 // Initialize Firebase app
-const firebaseApp = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-// Get authentication instance
-const auth = getAuth(firebaseApp);
+const auth = firebase.auth();
+// const db = firebase.default.database();
 
 
 
-// Get Firestore instance
-const db = getFirestore(firebaseApp);
-
-export { auth, db };
+export { auth };

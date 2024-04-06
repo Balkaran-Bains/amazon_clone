@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import AmazonImage from './a.jpg';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase/firebase';
+import { auth } from './firebase';
+import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
@@ -33,7 +34,7 @@ function Login() {
 
   return (
     <div>
-      <div className="flex flex-col justify-center items-center h-screen bg-gray-200">
+      <div className="flex flex-col justify-center items-center h-screen bg-gray-200 bg-gradient-to-br from-purple-200 to-amber-100">
         <div className="mb-6">
           <img src={AmazonImage} alt="" className="w-64 h-20 rounded-md" />
         </div>
@@ -69,13 +70,24 @@ function Login() {
             <h1 className="text-gray-700 text-center font-bold mb-2">
               By signing in, you agree to Amazon's Conditions of Use and Privacy Notice.
             </h1>
-            <button
+            {/* <button
               onClick={register}
               className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
               type="button"
             >
               Create Your Amazon Account
+            </button> */}
+
+            <Link to='/newuser'>
+
+           
+            <button
+              
+              className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+              type="button" >
+              Create Your Amazon Account
             </button>
+            </Link>
           </div>
         </form>
       </div>

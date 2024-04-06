@@ -8,10 +8,11 @@ function Cart() {
   const [{basket,user},dispatch]=useStateValue();
   
   return (
+    
     <div className="bg-gray-100 min-h-screen ">
   <Header />
   <div className="flex justify-center items-center mt-10">
-    <h1>hello iujb{user?.email} hj </h1>
+    {/* <h1>hello {user?.email}  </h1>   ###########*************** NOT WORKING */}
     <div className="w-3/4 bg-gray-100 shadow-lg rounded-lg">
       <div className="p-5">
         <Subtotal />
