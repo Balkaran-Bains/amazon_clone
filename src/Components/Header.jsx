@@ -77,6 +77,12 @@ function Header() {
                 <IoIosSearch className='bg-orange-300 text-black h-10 w-10 p-2 font-bold rounded-sm hover:bg-orange-400 transition duration-300 ease-in-out' />
             </div>
 
+            <Link to={'/contact'} className="hover:text-gray-500 hover:cursor-pointer hover:scale-105 transition duration-200">
+        <div>
+            <h3 className='text-xs text-gray-400'></h3>
+            <h1> Contact Me <small>😃</small></h1>
+        </div>
+    </Link>
 
 <div className='4things flex justify-center gap-6 mr-4 items-center leading-none'>
 

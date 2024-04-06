@@ -11,6 +11,7 @@ import { getAuth } from "firebase/auth";
 import { loadStripe } from "@stripe/stripe-js";
 import {Elements} from "@stripe/react-stripe-js";
 import YetToBeAdd from './Components/YetToBeAdd';
+import ContactMe from './Components/ContactMe';
 
 
 const promis = loadStripe("pk_test_51P250hSCjJGfEr8sOp1wkxaXvgZctn5RCqBxWmMtwG67E4DaXA3K5SCe6T1MMn2nVKM2Divy589tMEp3OvCqofvR00PNk8a1W0");
@@ -55,6 +56,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/newuser' element={<Newuser />} />
         <Route path='/yetToAdd' element={<YetToBeAdd />} />
+        <Route path='/contact' element={<ContactMe />} />
         <Route path='/' element={<Home />} />
       </Routes>
     </div>
